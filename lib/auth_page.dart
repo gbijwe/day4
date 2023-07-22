@@ -12,7 +12,7 @@ class AuthPage extends StatelessWidget {
         child: GestureDetector(
             onTap: () => Auth().signIn(context),
             child: Container(
-              child: Text("Google Auth"),
+              child: Text("Commited to being single"),
             )),
       ),
     );
