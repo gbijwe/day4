@@ -1,3 +1,5 @@
+import 'package:day4/auth_page.dart';
+import 'package:day4/homepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +21,18 @@ class Auth {
 
     try {
       await authInstance.signInWithCredential(cred);
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomePage()));
     } on FirebaseAuthException catch (e) {
       final snackBar = SnackBar(content: Text(e.message.toString()));
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
+  }
+
+  Future signOut(BuildContext context) async {
+    await authInstance.signOut();
+
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => AuthPage()));
   }
 }
