@@ -1,9 +1,9 @@
 import 'package:day4/google_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -11,15 +11,20 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final instance = FirebaseAuth.instance.currentUser;
+    String? photo = instance!.photoURL;
+    String? name = instance.displayName;
+    String? email = instance.email;
     return Scaffold(
       appBar: AppBar(
         title: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Welcome to FIREBASE",
+              "Base of Fire",
               style: TextStyle(
                 color: Colors.redAccent,
+                fontStyle: FontStyle.italic,
               ),
             ),
           ],
@@ -28,8 +33,28 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            CircleAvatar(
+              radius: 65,
+              backgroundImage: NetworkImage(photo.toString()),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Text(
+              '$name',
+              style: const TextStyle(
+                  fontSize: 30,
+                  fontStyle: FontStyle.normal,
+                  color: Colors.white),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Email: $email',
+              style: const TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
+            ),
+            const SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.only(bottom: 15.0),
               child: InkWell(

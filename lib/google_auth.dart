@@ -10,7 +10,6 @@ class Auth {
 
   Future signIn(BuildContext context) async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-
     final GoogleSignInAuthentication googleAuth =
         await googleUser!.authentication;
 
