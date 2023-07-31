@@ -1,5 +1,8 @@
 import UIKit
 import Flutter
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
