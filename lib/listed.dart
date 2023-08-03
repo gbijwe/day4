@@ -37,7 +37,7 @@ class _ListedState extends State<Listed> {
             ),
           ),
           subtitle: Text(
-            'Interest:  ${user.interest} \n Profession: ${user.profession} \n Birthday: ${user.dob}',
+            'Interest:  ${user.interest}\nProfession: ${user.profession}\nBirthday: ${user.dob}',
             style: TextStyle(
               fontStyle: FontStyle.italic,
             ),
