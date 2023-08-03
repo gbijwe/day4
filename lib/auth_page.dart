@@ -1,4 +1,4 @@
-import 'package:day4/google_auth.dart';
+import 'package:task3/google_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +25,7 @@ class AuthPage extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.orange,
+                    color: Colors.deepPurple,
                     width: 3.5,
                   ),
                   borderRadius: BorderRadius.circular(40))),

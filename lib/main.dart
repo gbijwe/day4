@@ -1,5 +1,5 @@
-import 'package:day4/auth_page.dart';
-import 'package:day4/firebase_options.dart';
+import 'package:task3/auth_page.dart';
+import 'package:task3/firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -20,10 +20,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'DFC Session 3',
+      title: 'DFC Task 3',
       theme: ThemeData(
         useMaterial3: true,
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
       ),
       home: AuthPage(),
     );

@@ -1,4 +1,4 @@
-name: day4
+name: task3
 description: A new Flutter project.
 publish_to: 'none'
 version: 0.1.0
@@ -7,11 +7,15 @@ environment:
   sdk: '>=3.0.3 <4.0.0'
 
 dependencies:
+  cloud_firestore: ^4.8.4
+  cupertino_icons: ^1.0.5
+  date_field: ^3.0.5
   firebase_auth: ^4.7.1
   firebase_core: ^2.15.0
   flutter:
     sdk: flutter
   google_sign_in: ^6.1.4
+  intl: ^0.18.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -19,3 +23,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/

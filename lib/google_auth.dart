@@ -1,5 +1,5 @@
-import 'package:day4/auth_page.dart';
-import 'package:day4/homepage.dart';
+import 'package:task3/auth_page.dart';
+import 'package:task3/homepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
