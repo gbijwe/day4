@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'package:flutter/services.dart';
 import 'package:task3/listed.dart';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -176,8 +177,10 @@ class _HomePageState extends State<HomePage> {
                     TextField(
                       // interest
                       controller: controller4,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                       decoration: InputDecoration(
-                        hintText: "Birthday",
+                        hintText: "Birthday: DDMMYYYY",
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                               width: 1.5,
